@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-8">
+        <h1><%=@artist.name%></h1>
+        <h2>Albums (<%=@albums.count%>)</h2>
+
+        <% @albums.each do |album|%>
+            <div class="col-2">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<%= album.image_url %>" alt="Card image cap" height="160" width="160">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= album.name %>
+                        </h5>
+                        <p class="card-text"><%= album.released_at %></p>
+                    </div>
+                </div>
+            </div>
+            <%end%>
+    </div>
+</div>

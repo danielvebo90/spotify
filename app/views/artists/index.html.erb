@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <%@artists.each do |artist|%>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<%= artist.image_url %>" alt="Card image cap" height="260" width="260">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= artist.name %>
+                        </h5>
+                        <a href="<%=artists_path %>/<%=artist.id %>" class="btn btn-primary">See More</a>
+                    </div>
+                </div>
+            </div>
+            <%end%>
+    </div>
+</div>
